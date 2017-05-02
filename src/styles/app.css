@@ -1,0 +1,243 @@
+.app {
+  background-image: url('./Background.jpg');
+  width: 95%;
+  position: relative;
+  margin: 0 auto;
+}
+
+main{
+  width: 1500px;
+  color:white;
+  background: white;
+  display: block;
+  margin: auto;
+}
+
+* {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;  /* Firefox, other Gecko */
+  box-sizing: border-box;    /* Opera/IE 8+ */
+}
+
+/*********************************
+Header
+*********************************/
+
+ #navlink {
+  display:block;
+}
+
+ #navlink {
+  display:none;
+  float: right;
+  text-decoration: none;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin:-150px 20px 0 0;
+}
+
+.app #logo {
+  position: relative;
+  display: block;
+  height: 170px;
+  width: 55%;
+  background: url('../img/Market.jpg') no-repeat left center;
+  margin: 0 0 0 2%;
+}
+
+
+/*********************************
+Header navigation
+*********************************/
+
+nav {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  overflow: hidden;
+  float:left;
+  background: black;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0 0 3% 18%;
+  font: 1.3em Arial, Helvetica, sans-serif;
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+  margin: 0;
+}
+
+nav li a {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  height: 27px;
+  line-height: 1em;
+  padding: .5em 2em 0 0;
+  text-align: right;
+  float: left;
+}
+
+nav li a:hover {
+  text-decoration: none;
+}
+
+nav li a:after {
+  content: " ▶";
+  color: white;
+  display: inline-block;
+  width: 2em;
+}
+
+nav li a:visited {
+  color: white;
+}
+
+nav a:hover:after {
+  content: " ▼";
+  width: 2em;
+}
+
+.app-wrapper{
+  width:1360px;
+}
+
+.app-nav {
+  width: 100px;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-content: stretch;
+}
+
+.nav-item {
+  height: 60px;
+  background-color: coral;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-item:hover {
+  background-color: yellow;
+}
+
+/*********************************
+Layout for diagramms and for the
+sketchfab-model
+*********************************/
+
+#main-content {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#main-content li{
+  float: right;
+  width: 18%;
+  margin: 2.5%;
+  background-color: #f5f5f5;
+  color: #bdc3c7;
+}
+
+#main-content li a p{
+  margin: 0;
+  padding: 5%;
+  font-size: 0.75em;
+  color: #bdc3c7;
+}
+
+#model {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#model li{
+  float: left;
+  width: 45%;
+  margin: 2.5%;
+  background-color: #f5f5f5;
+  color: #bdc3c7;
+}
+
+#model li a iframe{
+  margin: auto;
+  padding: 5%;
+  font-size: 0.75em;
+  color: #bdc3c7;
+  display: block;
+}
+
+h1, h2{
+  color: #darkgrey;
+}
+
+img {
+  max-width: 100%;
+  margin: auto;
+  display: block;
+}
+
+/*********************************
+Button
+*********************************/
+
+#form4 button{
+ margin:0;
+ padding:0;
+ float:right;
+ margin: 1%;
+ overflow:hidden;
+ width:153px;
+ height:35px;
+ border:none;
+ cursor:pointer;
+ text-align:center;
+ }
+
+#form4 button:hover{
+background: #E6E6E6;
+}
+
+/*********************************
+Footer
+*********************************/
+
+footer {
+  clear: both;
+  display: block;
+  width: 100%;
+  padding: 3px 100px;
+  margin: 0 auto;
+  height: 180px;
+  background-color: #131313;
+  background-size: 20px 20px;
+  color: #ccc;
+}
+
+footer section {
+  float: left;
+  width: 33.3%;
+}
+
+footer h2 {
+  font-size: 1em;
+}
+
+footer p {
+  font-size: 0.8em;
+}
+
+footer a {
+  color: #ccc;
+}

@@ -6,6 +6,7 @@ import img from  'react';
 //import Screen3 from './screen/Screen3';
 import './styles/app.css';
 import './styles/responsive.css';
+import './node_modules/dxf-parser/lib/DxfParser.js'
 
 
 class App extends Component {
@@ -22,8 +23,28 @@ class App extends Component {
   }
 
   render(){
-    var screenIndex = 2;
-    var ActiveScreen
+    //var screenIndex = 2;
+    //var ActiveScreen
+    var reader = new FileReader();
+    var outputElement = document.getElementById('output');
+
+    document.getElementById("file-field").onChange=
+
+    function(){
+      reader.readAsText(this.files[0]);
+      reader.onload = function(e){
+        var fileText = e.target.result;
+        var parser = new DxfParser();
+        var dxf = null;
+        try {
+						dxf = parser.parseSync(fileText);
+					} catch(err) {
+						return console.error(err.stack);
+					}
+					console.log('Success!');
+					outputElement.innerHTML = JSON.stringify(dxf, null, 4);
+				};
+			};
 
     return(
       <div className="app">
@@ -49,11 +70,11 @@ class App extends Component {
                   <h1>Costs</h1>
                     <h2>Renovation Costs</h2>
                       <p>
-                        <img src={require('./img/Dia4.jpg')}/>
+                        <img src={require('./img/Dia4.jpg')} alt=""/>
                       </p>
                     <h2>Life cycle Costs</h2>
                       <p>
-                        <img src={require('./img/Dia3.jpg')}/>
+                        <img src={require('./img/Dia3.jpg')} alt=""/>
                       </p>
                 </a>
               </li>
@@ -62,10 +83,10 @@ class App extends Component {
                   <h1>Your Project</h1>
                     <h2>Heating and Ventilation</h2>
                       <p>
-                        <img src={require('./img/Dia1.jpg')}/>
+                        <img src={require('./img/Dia1.jpg')} alt=""/>
                       </p>
                       <p>
-                        <img src={require('./img/Dia2.jpg')}/>
+                        <img src={require('./img/Dia2.jpg')} alt=""/>
                       </p>
                 </a>
                 </li>
